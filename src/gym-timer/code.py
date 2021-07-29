@@ -18,6 +18,8 @@ def check_options():
             clear_display()
 
         elif params[0] == "up":
+            if not down_timer(10, refresh_rate):
+                return check_options()
             beep(beep_time)
             if not up_timer(params[1], refresh_rate):
                 return check_options()
@@ -26,6 +28,8 @@ def check_options():
             clear_display()
 
         elif params[0] == "down":
+            if not down_timer(10, refresh_rate):
+                return check_options()
             beep(beep_time)
             if not down_timer(params[1], refresh_rate):
                 return check_options()
@@ -34,6 +38,8 @@ def check_options():
             clear_display()
 
         elif params[0] == "emom":
+            if not down_timer(10, refresh_rate):
+                return check_options()
             beep(beep_time)
             if not every_x_for_y(60, params[1], beep_time, refresh_rate):
                 return check_options()
@@ -42,6 +48,8 @@ def check_options():
             clear_display()
 
         elif params[0] == "every" and len(params) < 4:
+            if not down_timer(10, refresh_rate):
+                return check_options()
             beep(beep_time)
             if not every_x_for_y(params[1], params[2], beep_time, refresh_rate):
                 return check_options()
@@ -50,6 +58,8 @@ def check_options():
             clear_display()
 
         elif params[0] == "every":
+            if not down_timer(10, refresh_rate):
+                return check_options()
             beep(beep_time)
             if not every_x_and_y_for_z(params[1], params[2], params[3], beep_time, refresh_rate):
                 return check_options()
@@ -58,6 +68,8 @@ def check_options():
             clear_display()
 
         elif params[0] == "tabata":
+            if not down_timer(10, refresh_rate):
+                return check_options()
             beep(beep_time)
             if not every_x_and_y_for_z(20, 10, 8, beep_time, refresh_rate):
                 return check_options()
