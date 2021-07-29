@@ -11,7 +11,7 @@ A gym timer that fits in a small tin can
 ### To send commands to the timer on Mac/Linux
 1. Copy `src/gym-timer.sh` to your machine 
 1. Make sure the file is executable by doing `chmod +x ./gym-timer.sh` (or if you need to use sudo `sudo chmod +x ./gym-timer.sh`)
-1. Send the command that you want to use!
+1. Send the command that you want to use! All commands have a 10 second countdown.
 
     Up:
     - `./gym-timer.sh up/3` or `./gym-timer.sh up/3/seconds` counts up 3 seconds.
